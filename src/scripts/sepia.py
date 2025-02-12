@@ -35,12 +35,12 @@ def process_image(input_path, output_path):
 
     # Create a white background
     background = Image.new("RGB", (final_w, final_h), (255, 255, 255))
-    print(final_w,final_h)
+    print(final_w,final_h, final_w/final_h)
     # Paste the processed image onto the white background
     background.paste(tinted_img, (pad_w, pad_h))
-    print(pad_w,pad_h)
+    print(pad_w/img_w,pad_h/img_h)
     # Save the processed image
     background.save(output_path)
 
 # Example usage
-process_image("/Users/nicpavao/Desktop/Mayor_Pete.png", "./cover_photos/Mayor_Pete.jpg")
+process_image("/Users/nicpavao/Desktop/Bigger_Boat.png", "../cover_photos/Bigger_Boat.jpg")
